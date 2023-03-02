@@ -6,7 +6,7 @@ Credits:
 2. https://www.geeksforgeeks.org/how-to-upload-file-using-formidable-module-in-node-js/
 
 
-Create a .env file with you Cloudinary creds labeled as
+Create a .env file with you Cloudinary variables labeled as
 
 - Cloud_Name:
 - Api_Key:
