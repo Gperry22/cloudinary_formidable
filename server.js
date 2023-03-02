@@ -13,9 +13,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
 //Serve up Public Folder
 app.use(express.static("public"));
@@ -37,9 +34,11 @@ app.get("/", (req, res) => {
 
 //Post route that captures file
 app.post("/api/upload", (req, res, next) => {
+
   const form = new formidable.IncomingForm();
   //Grabbing file path
   form.parse(req, function (err, fields, files) {
+
     console.log(files.profilePic.filepath);
     var oldPath = files.profilePic.filepath;
     //Creating new filename and directory to store file locally
