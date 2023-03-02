@@ -95,9 +95,3 @@ const deletefile = async (filePath) => {
 app.listen(PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
 });
-
-//Credits:
-//1.
-//https://www.section.io/engineering-education/how-to-upload-images-to-cloudinary-using-node.js/
-//2.
-//https://www.geeksforgeeks.org/how-to-upload-file-using-formidable-module-in-node-js/
