@@ -1,4 +1,4 @@
-# cloudinary_formidiable
+# cloudinary_formidable
 
 Credits:
 1.
