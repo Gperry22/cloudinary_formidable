@@ -13,7 +13,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
 //Serve up Public Folder
 app.use(express.static("public"));
 
@@ -34,11 +33,9 @@ app.get("/", (req, res) => {
 
 //Post route that captures file
 app.post("/api/upload", (req, res, next) => {
-
   const form = new formidable.IncomingForm();
   //Grabbing file path
   form.parse(req, function (err, fields, files) {
-
     console.log(files.profilePic.filepath);
     var oldPath = files.profilePic.filepath;
     //Creating new filename and directory to store file locally
@@ -65,6 +62,8 @@ const uploadImage = async (imagePath) => {
     use_filename: true,
     unique_filename: false,
     overwrite: true,
+    //Name of folder to upload images to, default is root
+    folder: "classImages",
   };
 
   try {
